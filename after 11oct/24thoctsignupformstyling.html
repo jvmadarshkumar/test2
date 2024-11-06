@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./1162477.jpg);
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        #maindiv{
+            background-color: rgba(214, 205, 192, 0.521);
+            width: 50%;
+            border-radius: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            padding: 40px;
+            text-align: left;
+        }
+        label{
+            display:block;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        input[type="text"],input[type="email"], input[type="password"],select{
+            width: 100%;
+            height: 40px;
+            margin: 2px;
+            border: none;
+        }
+        textarea{
+            width: 100%;
+        }
+        input[type="submit"], input[type="reset"]{
+            background-color: brown;
+            color: aliceblue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input[type="submit"]:hover{
+            background-color: black;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .error{
+            color: brown;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="maindiv">
+        <h1>sign up!</h1>
+        <form onsubmit="return(sub())" name="myform">
+            <lable for="name">NAME:</lable>
+            <input type="text" name="name" id="name"
+            placeholder="Full Name">
+            <span class="error" id="nameerror"></span>
+            <br><br>
+            <lable for="email">EMAIL:</lable>
+            <input type="email" name="email" id="email"
+            placeholder="Email">
+            <span class="error" id="emailerror"></span>
+            <br><br>
+            <lable for="password">PASSWORD:</lable>
+            <input type="password" name="password" id="password"
+            placeholder="password">
+            <span class="error" id="passworderror"></span>
+            <br><BR>
+                <lable for="cities">CITY:</lable>
+                <select name="cities" id="cities">
+                    <option value="select">Select</option>
+                    <option value="select">Select</option>
+                    <option value="select">Select</option>
+                    <option value="select">Select</option>
+                    <option value="select">Select</option>
+                </select>
+                <span class="error" id="selecterror"></span>
+                <br><br>
+                <lable for="address">ADDRESS:</lable>
+                <Textarea name="address" id="address" cols="20"
+                rows="5"></Textarea>
+                <span class="error" id="textareaerror"></span>
+                <br><br>
+                <lable for="gender">GENDER:</lable>
+                <input type="radio" value="male" name="gender" id="male">Male
+                <input type="radio" value="Female" name="gender" id="Female">Female
+                <span class="error" id="gendererror"></span>
+                <br><br>
+                <label for="upload">Upload File:</label>
+                <input type="file" id="upload">
+                <span class="error" id="uploaderror"></span>
+                <br><br>
+                <input type="submit" value="Submit Form">
+                <input type="reset" value="RESET">
+
+
+        </form>
+    </div>
+    </center>
+    <script>
+        function sub(){
+            var isvalid = true;
+            if(document.getElementById('name').value==""){
+                document.getElementById('nameerror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('nameerror').innerText="";
+            }
+            if(document.getElementById('email').value==""){
+                document.getElementById('emailerror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('emailerror').innerText="";
+            }
+            if(document.getElementById('password').value==""){
+                document.getElementById('passworderror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('passworderror').innerText="";
+            }
+            if(document.getElementById('cities').value=="select"){
+                document.getElementById('selecterror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('selecterror').innerText="";
+            }
+            if(document.getElementById('address').value==""){
+                document.getElementById('textareaerror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('textareaerror').innerText="";
+            }
+            if(document.myform.gender.value==""){document.getElementById('gendererror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('gendererror').innerText="";
+            }
+            if(document.getElementById('upload').value==""){
+                document.getElementById('uploaderror').innerText="Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('uploaderror').innerText="";
+            }
+            return isvalid;
+        }
+    </script>
+</body>
+</html>

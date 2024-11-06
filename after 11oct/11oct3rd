@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 20px double black;
+            padding: 20px;
+            background-image:url(./gmail.png.jpg);
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            background-size: 100%;
+            
+        }
+        #div1{
+            border: 20px double black;
+            padding: 20px;
+            background-image:url(./gmail.png.jpg);
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+            background-size: 100%;
+            
+        }
+        #div2{
+            border: 20px double black;
+            padding: 20px;
+            background-image:url(./gmail.png.jpg);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            background-size: 100%;
+            
+        }
+
+        h1{
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>hello</h1>
+    </div>
+    <div id="div1">
+        <h1>hello</h1>
+    </div>
+    <div id="div2">
+        <h1>hello</h1>
+    </div>
+</body>
+</html>
